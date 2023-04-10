@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imigração</title>
+  </head>
+  <body>
+    <h1>Sistema de imigração</h1>
+    Qual naturalidade você é: <input type="text" name="txtpass" id="txtpass" />
+    <input type="button" value="Confirmar" onclick="verificar()" />
+    <div id="resultado"></div>
+    <script>
+      function verificar() {
+        var country = document.getElementsByName('input#txtpass');
+        var resultado = document.getElementsByName('div#resultado');
+        var recebe = name(country.value);
+        resultado.innerHTML = `<p>Sua naturalidade atual é de <strong>${rec}</strong>`;
+        if (recebe == Brasileiro) {
+          resultado.innerHTML += '<p>Você é estrangeiro!</p>';
+        }
+        resultado.innerHTML += '<p>Você é Brasileiro!</p>';
+      }
+    </script>
+  </body>
+</html>
